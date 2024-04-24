@@ -1,5 +1,6 @@
 package com.asher.ashermod;
 
+import com.asher.ashermod.block.ModBlocks;
 import com.mojang.logging.LogUtils;
 import com.asher.ashermod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -25,6 +26,7 @@ public class AsherMod {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
